@@ -12,7 +12,7 @@ function loadProfile() {
         document.getElementById('user-currency').innerText = profile.currency;
 
         const profileImage = document.getElementById('profile-image');
-        profileImage.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/profileImages/" + profile.profileImage + ".svg";
+        profileImage.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/profileImages/" + profile.profileImage + ".svg";
         profileImage.style.background = "radial-gradient(" + profile.profileColor + " 65%, transparent 90%)";
 
         // Hide placeholder content
@@ -63,7 +63,7 @@ function deleteAccountPopup() {
     popup.firstChild.append(cancelButton);
 
     const trashcan = document.createElement("img");
-    trashcan.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/TrashButton.svg";
+    trashcan.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/TrashButton.svg";
     trashcan.alt = "Trash can icon";
     trashcan.classList.add("trash-icon");
 

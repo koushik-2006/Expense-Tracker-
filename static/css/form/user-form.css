@@ -141,7 +141,7 @@ label, p {
 #person11:checked ~ .label-person11,
 #person12:checked ~ .label-person12 {
     border-color: var(--Navy);
-    background-image: url("https://koushik-2006.github.io/expense-tracker-1/static/images/check-icon.svg");
+    background-image: url("https://koushik-2006.github.io/Expense-Tracker-/static/images/check-icon.svg");
     background-size: 3rem;
     background-repeat: no-repeat;
     background-position: top left;

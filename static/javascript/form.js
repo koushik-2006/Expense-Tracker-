@@ -700,7 +700,7 @@ function confirmDelete(entityType) {
     popup.firstChild.append(cancelButton);
 
     const trashcan = document.createElement("img");
-    trashcan.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/TrashButton.svg";
+    trashcan.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/TrashButton.svg";
     trashcan.alt = "Trash can icon";
     trashcan.classList.add("trash-icon");
 

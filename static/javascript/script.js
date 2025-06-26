@@ -462,7 +462,7 @@ function closeMenu() {
         }
 
         // The menu is 'close' (or the 'X' icon). Change to hamburg
-        logo.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/hamburger-icon.svg";
+        logo.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/hamburger-icon.svg";
         logo.classList.replace('close', 'hamburg');
         navbar.style.width = '0%'
     }
@@ -475,12 +475,12 @@ function toggleMenu() {
     if(logo.display != 'none') {
         if(logo.classList.contains('hamburg')) {
             // Change to 'x' icon
-            logo.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/x-icon.svg";
+            logo.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/x-icon.svg";
             logo.classList.replace('hamburg', 'close');
             navbar.style.width = '70%';
         } else {
             // Change to 'hamburger' icon
-            logo.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/hamburger-icon.svg";
+            logo.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/hamburger-icon.svg";
             logo.classList.replace('close', 'hamburg');
             navbar.style.width = '0%';
         }
@@ -547,7 +547,7 @@ async function fillProfilePics(image=null, color=null) {
                 imageToUse = responseData.data.profileImage;
                 const colorToUse = responseData.data.profileColor;
 
-                pic.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/profileImages/" + imageToUse + ".svg";
+                pic.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/profileImages/" + imageToUse + ".svg";
                 pic.style.background = "radial-gradient(" + colorToUse + " 65%, transparent 90%)";
 
                 // Check for profile labels
@@ -557,7 +557,7 @@ async function fillProfilePics(image=null, color=null) {
                 }
             });
         } else {
-            pic.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/profileImages/" + imageToUse + ".svg"
+            pic.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/profileImages/" + imageToUse + ".svg"
             pic.style.background = "radial-gradient(" + color + " 65%, transparent 90%)";
 
             // Check for profile labels
@@ -640,7 +640,7 @@ function showCookieConsent(show) {
         popupText.innerText = "This website uses cookies to provide a personalized experience. Cookies are essential to the functionality of this website. When you click 'I Accept', you consent to our use of cookies.";
 
         const privacy = document.createElement("a");
-        privacy.href = "https://koushik-2006.github.io/expense-tracker-1/templates/privacy-policy.html#cookie-section";
+        privacy.href = "https://koushik-2006.github.io/Expense-Tracker-/templates/privacy-policy.html#cookie-section";
         privacy.alt = "Link to cookie policy";
         privacy.textContent = "Cookie Policy";
         privacy.classList.add("normal-link");
@@ -839,7 +839,7 @@ function changeActiveDot(slideNum, uniqueClass) {
  */
 function generateProfileUI(username, email, color, img, currency) {
     const user_img = document.createElement('img');
-    user_img.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/profileImages/" + img + ".svg";
+    user_img.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/profileImages/" + img + ".svg";
     user_img.id = "user-thumbnail";
     user_img.alt = "User's profile image."
     user_img.classList.add('profile-icon');
@@ -868,7 +868,7 @@ function generateProfileUI(username, email, color, img, currency) {
     currency_container.append(currency_label, user_currency);
 
     const edit_button = document.createElement('img');
-    edit_button.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/EditButtonSM.svg";
+    edit_button.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/EditButtonSM.svg";
     edit_button.classList.add('edit-img');
     edit_button.alt = "Edit Button"
     edit_button.addEventListener('click', function() {
@@ -1319,7 +1319,7 @@ function generateTableUI(type, entityList, currency, dateType, limit=null) {
 
 function createWarningIcon(message) {
     const warning = document.createElement("img");
-    warning.src = "https://koushik-2006.github.io/expense-tracker-1/static/images/WarningIcon.svg";
+    warning.src = "https://koushik-2006.github.io/Expense-Tracker-/static/images/WarningIcon.svg";
     warning.classList.add('warning-icon');
     warning.title = message;
     warning.alt = "Warning message icon";
