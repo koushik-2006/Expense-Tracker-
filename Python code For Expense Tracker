@@ -1,0 +1,85 @@
+class ExpenseTracker:
+    def __init__(self):
+        self.budget = 0
+        self.earnings = []
+        self.expenses = []
+
+    def set_budget(self, amount):
+        self.budget = amount
+        print(f"✅ Budget set to ₹{amount}")
+
+    def add_earning(self, amount, source):
+        self.earnings.append({"amount": amount, "source": source})
+        print(f"💰 Added earning of ₹{amount} from {source}")
+
+    def add_expense(self, amount, category):
+        self.expenses.append({"amount": amount, "category": category})
+        print(f"💸 Added expense of ₹{amount} for {category}")
+
+    def view_summary(self):
+        total_earnings = sum(item["amount"] for item in self.earnings)
+        total_expenses = sum(item["amount"] for item in self.expenses)
+        balance = self.budget + total_earnings - total_expenses
+
+        print("\n📊 --- Summary ---")
+        print(f"Budget: ₹{self.budget}")
+        print(f"Total Earnings: ₹{total_earnings}")
+        print(f"Total Expenses: ₹{total_expenses}")
+        print(f"Remaining Balance: ₹{balance}")
+        print("-------------------\n")
+
+    def view_details(self):
+        print("\n💰 Earnings:")
+        for earning in self.earnings:
+            print(f"- ₹{earning['amount']} from {earning['source']}")
+
+        print("\n💸 Expenses:")
+        for expense in self.expenses:
+            print(f"- ₹{expense['amount']} on {expense['category']}")
+        print()
+
+# ---------- Main Function ----------
+def main():
+    tracker = ExpenseTracker()
+
+    while True:
+        print("-------- Expense Tracker --------")
+        print("1. Set Budget")
+        print("2. Add Earning")
+        print("3. Add Expense")
+        print("4. View Summary")
+        print("5. View Details")
+        print("6. Exit")
+
+        choice = input("Enter your choice (1-6): ")
+
+        if choice == '1':
+            amount = float(input("Enter your total budget amount: ₹"))
+            tracker.set_budget(amount)
+
+        elif choice == '2':
+            amount = float(input("Enter earning amount: ₹"))
+            source = input("Enter source of earning: ")
+            tracker.add_earning(amount, source)
+
+        elif choice == '3':
+            amount = float(input("Enter expense amount: ₹"))
+            category = input("Enter expense category: ")
+            tracker.add_expense(amount, category)
+
+        elif choice == '4':
+            tracker.view_summary()
+
+        elif choice == '5':
+            tracker.view_details()
+
+        elif choice == '6':
+            print("Exiting Expense Tracker. Goodbye!")
+            break
+
+        else:
+            print("❌ Invalid choice. Please try again.")
+
+# ---------- Run the program ----------
+if __name__ == "__main__":
+    main()
